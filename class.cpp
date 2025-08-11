@@ -1,31 +1,45 @@
 #include <iostream>
 using namespace std;
 
-class student{
-    public:
-    {
-        int rollno;
-        char student;
-        int subject;
-        float mark;
-    }
+class Student {
+public:
+    int rollno;
+    string name;
+    float marks[3];
 };
-int main()
-{
-    int i,n,sub;
-    student s1;
-    cout<<"Enter the number of student";
-    cin>>n;
-    for(i=1;i<=n;i++)
+
+int main() {
+    int n;
+
+    cout << "Enter the number of students: ";
+    cin >> n;
+
+    Student s[n]; // Array to store 'n' students
+
+    for (int i = 0; i < n; i++) 
     {
-    cout<<"Roll No:";
-    cin>>s1.rollno;
-    cout<<"Student Name";
-    cin>>s1.student;
-    for(i=1;i<=3;i++)
+        float sum = 0, avg = 0;  // Moved outside the inner loop
+
+        cout << "\nEnter details for student " << i + 1 << ":\n";
+
+        cout << "Roll No: ";
+        cin >> s[i].rollno;
+
+        cout << "Student Name: ";
+        cin >> s[i].name;
+
+        for (int j = 0; j < 3; j++) 
         {
-            cout<<"Subject "<< i << "mark" <<" = ";
-            cin>>sub;
+            cout << "Subject " << j + 1 << " mark: ";
+            cin >> s[i].marks[j];
+            sum += s[i].marks[j];
         }
+
+        avg = sum / 3;
+
+        cout << "Sum = " << sum << endl;
+        cout << "Average = " << avg << endl;
     }
+
+    return 0;
 }
