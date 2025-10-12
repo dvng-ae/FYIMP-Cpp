@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class find_area {
+class find_area{
 public:
     float area(float radius) { // For circle
         return 3.14f * radius * radius;
