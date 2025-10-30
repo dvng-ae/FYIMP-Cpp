@@ -30,16 +30,16 @@ public:
 int main() {
     Car car1, car2, car3;
 
-    cout << "--- Enter details of Car 1 ---" << endl;
+    cout << " Enter details of Car 1 " << endl;
     car1.car();
 
-    cout << "\n--- Enter details of Car 2 ---" << endl;
+    cout << "\n Enter details of Car 2 " << endl;
     car2.car();
 
-    cout << "\n--- Enter details of Car 3 ---" << endl;
+    cout << "\n Enter details of Car 3 " << endl;
     car3.car();
 
-    cout << "\n===== Displaying Car Details =====" << endl;
+    cout << "\n--- Displaying Car Details ---" << endl;
     car1.display();
     car2.display();
     car3.display();
